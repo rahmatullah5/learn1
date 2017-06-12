@@ -5,6 +5,13 @@ class ProductTest < ActiveSupport::TestCase
   #   assert true
   # end
   fixtures :products
+  test "product is not valid without a unique title - i18n" do
+    product = Product.new(title: products(:one).title,
+    description: "yyy", price: 1, image_url: "7apps.jpg")
+    assert product.invalid?
+    assert_equal ["has already been taken"], product.errors[:title]
+  end
+
   test "product attributes must not be empty" do
     product = Product.new
     assert product.invalid?
