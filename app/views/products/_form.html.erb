@@ -22,7 +22,7 @@
   <h2><%= pluralize(product.errors.count, "error") %>
     probhibited this product from being saved:</h2>
   <ul>
-    <% production.error.full_messages.each do |message|   %>
+    <% product.errors.full_messages.each do |message|   %>
     <li>
       <%= message %></li>
     <% end %>
