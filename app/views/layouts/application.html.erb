@@ -16,13 +16,7 @@
     <div id="columns">
       <div id="side">
         <div id="cart">
-          <!-- <% if @cart.line_items.empty? %>
-          style="display: none"
-          <% end %>
-          <%= render(@cart) %> -->
-          <!-- <% if @cart %>
-      <%= render @cart %>
-      <% end %> -->
+
           <% if @cart %>
           <%= hidden_div_if(@cart.line_items.empty?, id: 'cart') do %>
           <%= render @cart %>
