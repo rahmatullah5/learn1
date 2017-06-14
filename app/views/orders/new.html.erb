@@ -3,6 +3,6 @@
     <legend>Please Enter Your Details</legend>
 <%= render 'form', order: @order %> </fieldset>
 </div>
-
+<%= javascript_pack_tag("pay_type") %>
 
 <%= link_to 'Back', orders_path %>
