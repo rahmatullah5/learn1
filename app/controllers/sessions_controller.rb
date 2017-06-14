@@ -17,5 +17,6 @@ class SessionsController < ApplicationController
 
   def destroy
     session[:user_id] = nil
+    redirect_to store_index_url
   end
 end
