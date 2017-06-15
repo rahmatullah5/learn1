@@ -1,0 +1,7 @@
+id:
+  application:
+    #title:     "The Pragmatic Bookshelf"
+
+    question:  "Question"
+    news:      "News"
+    contact:   "Contact"

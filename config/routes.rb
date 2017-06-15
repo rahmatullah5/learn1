@@ -11,15 +11,15 @@ Rails.application.routes.draw do
   # get 'sessions/create'
   #
   # get 'sessions/destroy'
+
   scope '(:locale)' do
-    resources :users
     resources :orders
     resources :line_items
     resources :carts
-    root 'store#index', as: 'store_index'
+    root 'store#index', as: 'store_index', via: :all
   end
   #get 'store/index'
-
+  resources :users
   resources :products
   get 'say/hello'
 
